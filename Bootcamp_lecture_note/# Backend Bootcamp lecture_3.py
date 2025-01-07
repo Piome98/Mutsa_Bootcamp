@@ -144,6 +144,7 @@ def gugudan(dan):
 gugudan(5)
 """
 # for 문을 이용해 별 찍기
+"""
 # 왼쪽 정렬 증가
 n =5
 for i in range(n):
@@ -195,3 +196,4 @@ for i in range(int(num)):
         print('*', end='')
     print()
 
+"""
