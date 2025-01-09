@@ -467,6 +467,7 @@ print(samsung.get_code())
 """
 
 # 18. 객체 생성 -> 17번에서 정의한 생성자를 통해 다음 정보를 갖는 객체를 생성해보세요
+"""
 # Stock 클래스 정의
 class Stock:
     def __init__(self, name, code, per, pbr, dividend_yield):
@@ -497,3 +498,7 @@ df = pd.DataFrame(data)
 
 # 출력
 print(df)
+
+"""
+
+# 19. 
