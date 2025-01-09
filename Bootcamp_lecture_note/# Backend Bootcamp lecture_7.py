@@ -138,19 +138,11 @@ print(car2.get_brand())
 """
 
 class Grade:
-    def __init__(self):
-        self.kor = 0
-        self.eng = 0
-        self.math = 0
+    def __init__(self,kor, eng, mat):
+        self.kor = kor
+        self.eng = eng
+        self.math = mat
 
-    def set_kor(self, k):
-        self.kor = k
-
-    def set_eng(self, e):
-        self.eng = e
-
-    def set_math(self, m):
-        self.math = m
 
     def get_total(self):
         return self.kor + self.eng + self.math  
@@ -173,16 +165,16 @@ class Grade:
 
 
 
-grade = Grade()
-kor = int(input("국어 성적: "))
-eng = int(input("영어 성적: "))
-math = int(input("수학 성적: "))
+def main():
+    kor = int(input('국어점수를 입력하세요: '))
+    eng = int(input('영어점수를 입력하세요: '))
+    mat = int(input('수학점수를 입력하세요: '))
 
-grade.set_kor(kor)
-grade.set_eng(eng)
-grade.set_math(math)
+    grade = Grade(kor, eng, mat)
+
+    print("총점 : ",grade.get_total())
+    print("평균 : ",grade.get_avg())
+    print("학점 : ",grade.get_grade())
 
 
-print("총합:", grade.get_total())
-print("평균:", grade.get_avg()) 
-print("최종 성적 등급:", grade.get_grade())
+main()
