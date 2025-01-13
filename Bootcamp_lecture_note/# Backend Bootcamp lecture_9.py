@@ -221,9 +221,38 @@ print(jack) # 얘만 리스트 안의 컴포넌트가 다른 주소값을 가짐
 """
 
 # 리스트 컴프리핸션(list comprehension)
-r1 = [1,2,3,4]
+"""r1 = [1,2,3,4]
 r2 = []
 
 for i in r1:
     r2.append(i*2)
 print(r2)
+
+#리스트의 생성과 그 리스트의 채울 데이터를 가공 추출하는 일련의 과정들을 하나로 묶는 것이 리스트 컴프리헨션이다.
+r2 = [x*2 for x in r1] # 리스트 컴프리헨션 
+print(r2)
+
+for i in r1:
+    if i % 2 == 0:
+        r2.append(i*2)
+print(r2)
+
+r2 = [x*2 for x in r1 if x % 2 ==0 ]
+print(r2)"""
+
+"""r1 = ['Black', 'White']
+r2 = ['Red', 'Blue', 'Green']
+r3 = [x+y for x in r1 for y in r2 ] # 리스트 컴프리헨션을 쓰기 위해 최외곽을 리스트형으로 묶음음
+print(r3)
+
+r3=[]
+for i in r1:
+    for j in r2:
+        r3.append(i+j)
+print(r3)"""
+
+[print(f'{i} * {j} = {i*j}') for i in range(1, 10) for j in range(1, 10)] # 리스트 컴프리핸션으로 구구단 출력력
+[print(i,'*', j, '=', i*j)for i in range(1,10) for j in range(1,10)]
+
+result = [x*y for x in range(1,10) for y in range(1,10)]
+print(result)
