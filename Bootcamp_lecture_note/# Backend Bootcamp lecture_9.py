@@ -160,7 +160,7 @@ else:
     """
 
 # 깊은 복사(deep copy) 와 얕은 복사(shallow copy):
-a = 100
+"""a = 100
 b = 100
 
 print(a==b)
@@ -187,3 +187,43 @@ print(r1 is r2) # 마찬가지로 r1의 데이터 값을 가진 새로운 r2 리
 s1 = [1,2]
 s2 = tuple(s1)
 s2 = list(s1) #[1,2] -> 카피 -> 주소는 새롭게 생성하되 데이터 값만 복사(데이터 연동 방지)
+"""
+import copy
+"""r1 = ['John',('man','USA'),[175,23]] #John은 미국남자로 175cm 23세
+r2 = list(r1) # r1의 내용으로 새로운 리스트를 만듦 -> 얕은 복사이므로 최상위 수준의 요소만 복사하고, 리스트 안의 가변객체는 동일한 객체를 참조함(주소값 동일)
+              # 따라서 두 리스트를 완전히 독립한 객체로 만들기 위해선 deep copy 기능을 써야 함
+
+print(r1 is r2)
+r1[2][0] = 180
+print(r1)
+print(r2)
+
+r3 = copy.deepcopy(r1)
+r3[2][0] = 201
+print(r1)
+print(r2)
+print(r3)
+print(r1 is r3)
+print(id(r1[2][0]))
+print(id(r2[2][0]))
+print(id(r3[2][0]))"""
+
+"""john = ['John',('man','USA'),[175,23]]
+tom = list(john)
+sean = copy.copy(john)
+jack = copy.deepcopy(john)
+john[2][1] += 1
+
+print(john)
+print(tom)
+print(sean)
+print(jack) # 얘만 리스트 안의 컴포넌트가 다른 주소값을 가짐
+"""
+
+# 리스트 컴프리핸션(list comprehension)
+r1 = [1,2,3,4]
+r2 = []
+
+for i in r1:
+    r2.append(i*2)
+print(r2)
