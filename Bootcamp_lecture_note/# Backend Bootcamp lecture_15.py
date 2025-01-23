@@ -203,7 +203,7 @@ for idx, (name, price, vol) in enumerate(top_10_stocks, 1):
 import json
 
 city = "Seoul"  # 조회할 도시
-apikey = "708973b23ed06b68f853128552163cc9"  # OpenWeatherMap API 키
+apikey = "##############"  # OpenWeatherMap API 키
 lang = "kr"  # 언어 설정
 
 api = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={apikey}&lang={lang}&units=metric"
