@@ -1,8 +1,8 @@
 # 빅데이터의 이해
 # 데이터 분석의 기초 개념
 # 넘파이(numpy)의 이해
-
 import numpy as np
+"""
 
 arr = np.array([1,2,3])
 print(type(arr)) # type -> ndarray 
@@ -73,3 +73,40 @@ arr = np.array([0,1,2,3,4,5])
 bool_arr = np.array([True, False, True, False, True, False])
 print(arr[bool_arr]) # True인 component들만 출력
 # 불린 인덱싱을 사용할 때 주의할 점은 불린 배열과 인덱싱 배열의 크기가 같아야 됨
+
+
+# 넘파이의 이해:
+import numpy as np
+
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+
+c = a + b
+c =  np.add(a,b)
+print(c)
+
+c = np.subtract(a,b)
+print(c)
+
+c = np.multiply(a,b)
+print(c)
+
+c = np.divide(a,b)
+print(c)
+
+c = np.maximum(a,b) # a와 b의 컴포넌트 모두를 비교해서 가장 큰 값을 가진 컴포넌트를 반환(동일 i,j,k... 자리의 가장 큰 값)
+print(c)
+c = np.minimum(a,b)
+print(c)"""
+
+# 브로드케스팅 예시
+"""arr1 = np.array([1, 2, 3])
+arr2 = np.array([[1], [2], [3]])
+
+result = arr1 + arr2 # 행렬 덧셈으로 출력됨
+print(result)
+
+result = np.add(arr1,arr2)
+print(result)"""
+
+import pandas as pd
